@@ -4,6 +4,7 @@ class Api::V1::BaseController < ApplicationController
 
   include Exceptions::Controller
 
+
   before_action :authenticate
 
   def authenticate

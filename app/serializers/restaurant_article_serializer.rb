@@ -1,7 +1,7 @@
 class RestaurantArticleSerializer < ArticleSerializer
   attributes :selling_price
 
-  has_one :restaurant
+  belongs_to :restaurant
 
   def name
     object.article.name
