@@ -4,7 +4,7 @@ class SupplierRestaurant < ApplicationRecord
 
   before_create :ensure_supplier
   def ensure_supplier
-    supplier = Supplier.find_by(supplier_id: self.supplier_id) unless self.supplier_id.blank?
+    supplier = Supplier.find_by(id: self.supplier_id) unless self.supplier_id.blank?
     supplier.create(
       name: self.name
     ) unless supplier || self.name.blank?
